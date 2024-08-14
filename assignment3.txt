@@ -1,0 +1,150 @@
+Task 1: String Manipulation
+
+<?php
+
+
+$text = "The quick brown fox jumps over the lazy dog.";
+
+function myName($text): void {
+    
+    $lowercase = strtolower($text);
+    $replaced = str_replace("brown", "red", $lowercase);
+
+    echo $replaced;
+}
+
+ myName($text);
+
+
+Task 2: Array Manipulation
+
+<?php
+
+$numbers = [1,2,3,4,5,6,7,8,9,10];
+
+function reEvenNum($n) {
+    
+    return $n%2==!0;
+}
+
+$oddNum=array_filter($numbers,'reEvenNum');
+print_r($oddNum);
+
+?>
+
+
+Task 3: Array Sorting  
+
+<?php
+
+
+    $grade = [85, 92, 78, 88, 95];
+    function sortGrade($grade){
+        rsort($grade);
+        print_r($grade);
+    }
+    sortGrade($grade);
+
+
+
+Task 4: Multidimensional Array
+
+
+<?php
+
+
+$studentGrades = [
+    "Student 1" => ['Math' => 85, 'English' => 92, 'Science' => 78],
+    "Student 2" => ['Math' => 88, 'English' => 95, 'Science' => 90],
+    "Student 3" => ['Math' => 75, 'English' => 80, 'Science' => 85],
+];
+
+
+function calculateAverage($avg)
+{
+    foreach ($avg as $student => $grades) {
+        $total = array_sum($grades);
+        $count = count($grades);
+        $average = $total / $count;
+        echo "Average number for $student: $average ";
+        if ($average >= 80) {
+            echo 'Grade : A+';
+        } else if ($average >= 70 && $average < 80) {
+            echo "Grade : A-";
+        } else if ($average >= 60 && $average < 70) {
+            echo "Grade : B";
+        } else if ($average >= 50 && $average < 60) {
+            echo "Grade : C";
+        } else if ($average >= 40 && $average < 50) {
+            echo "Grade : D";
+        } else {
+            echo 'fail';
+        }
+
+        echo "\n";
+    }
+}
+
+calculateAverage($studentGrades);
+
+
+
+Task 5: Password Generator
+
+
+<?php
+function generatePassword($length) {
+    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    $password = "";
+
+    for ($i = 0; $i < $length; $i++) {
+        $randoms = rand(0, strlen($chars) - 1);
+        $password .= $chars[$randoms];
+    }
+
+    return $password;
+}
+
+
+$password = generatePassword(12);
+
+
+echo "Generated Password: $password\n";
+
+
+
+?>
+
+
+
+
+
+
+Submission Instructions :
+
+
+
+
+Please submit your Github Repository Link. (If you need any help with GitHub, Please watch the recording of Masterclass on GitHub from Module 2, 18th September, 4pm)
+
+
+
+
+Name your files as task_1.php, task_2.php, task_3.php, task_4.php and task_5.php
+
+
+
+
+Screenshots as PDF will not be accepted.
+
+
+
+
+Do not create any separate folder inside your repository. Only push (.php) files.
+
+
+
+
+Do not use any HTML, CSS for this assignment.
+
+

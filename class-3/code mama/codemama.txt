@@ -1,0 +1,125 @@
+problem1:
+
+<?php
+    # Write your PHP code from here
+
+    fscanf(STDIN, "%s", $name);
+
+
+    print "Hello, ".$name."! Nice to meet you."
+    
+?>
+
+
+problem2:
+
+<?php
+    # Write your PHP code from here
+
+    // fscanf(STDIN, "%s", $name);
+    
+    $name = trim(fgets(STDIN));
+
+
+    print "Hello, ".$name."! Nice to meet you."
+
+
+    
+?>
+
+
+problem3:
+
+
+<?php
+    # Write your PHP code from here
+
+    fscanf(STDIN, "%d %d", $m, $n);
+
+    $diff = $m - $n;
+
+    echo $diff;
+    
+?>
+
+
+problem4:
+
+
+<?php
+    # Write your PHP code from here
+
+    $line = fgets(STDIN);
+
+    $data = explode(" ", $line);
+
+    $m = $data[0];
+    $n = $data[1];
+
+    $diff = $m - $n;
+
+    echo $diff;
+    
+?>
+
+
+problem5:
+
+
+
+
+<?php
+    # Write your PHP code from here
+
+     $line = fgets(STDIN);
+
+     $hasVowel = false;
+
+     for($i = 0; $i<strlen($line); $i++){
+      //   print $line[$i]."\n";
+
+        if( 
+         $line[$i] =='a'
+         || $line[$i] =='e'
+         || $line[$i] =='i'
+         || $line[$i] =='o'
+         || $line[$i] =='u'
+         || $line[$i] =='A'
+         || $line[$i] =='E'
+         || $line[$i] =='I'
+         || $line[$i] =='O'
+         || $line[$i] =='U'
+
+
+        ){
+         $hasVowel = true;
+         break;
+
+        }
+     }
+
+     if($hasVowel == true){
+      print 'The string contains a vowel.';
+     }else{
+      print 'The string does not contain any vowel.';
+     }
+    
+?>
+
+
+
+problem6:
+
+
+<?php
+    # Write your PHP code from here
+
+    fscanf(STDIN, "%d %d", $a, $b);
+
+    $fal = $a/$b;
+
+    print floor($fal);
+    
+?>
+
+
